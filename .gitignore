@@ -34,3 +34,7 @@ dist-ssr/
 
 # Prisma
 /generated/prisma/
+
+# SQLite database
+*.db
+*.db-journal
