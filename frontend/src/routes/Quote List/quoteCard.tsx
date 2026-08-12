@@ -102,7 +102,7 @@ export default function QuoteCard({ quote, onDelete }: Props) {
                 </div>
 
                 <div className="flex justify-between">
-                  <span className="text-gray-500">LHC loading</span>
+                  <span className="text-gray-500">LHC loading <br /><span className="text-red-500">“Lifetime Health Cover loading applies only to hospital cover. It does not apply to extras cover.”</span></span>
 
                   <span>{applicant.lhcLoading}%</span>
                 </div>
