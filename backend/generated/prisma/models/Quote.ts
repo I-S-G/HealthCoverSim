@@ -252,7 +252,7 @@ export type QuoteWhereInput = {
   hospitalCover?: Prisma.StringFilter<"Quote"> | string
   extraCover?: Prisma.StringFilter<"Quote"> | string
   paymentFrequency?: Prisma.StringFilter<"Quote"> | string
-  annualDiscout?: Prisma.IntFilter<"Quote"> | number
+  annualDiscout?: Prisma.FloatFilter<"Quote"> | number
   notes?: Prisma.StringFilter<"Quote"> | string
   createdAt?: Prisma.DateTimeFilter<"Quote"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Quote"> | Date | string
@@ -283,7 +283,7 @@ export type QuoteWhereUniqueInput = Prisma.AtLeast<{
   hospitalCover?: Prisma.StringFilter<"Quote"> | string
   extraCover?: Prisma.StringFilter<"Quote"> | string
   paymentFrequency?: Prisma.StringFilter<"Quote"> | string
-  annualDiscout?: Prisma.IntFilter<"Quote"> | number
+  annualDiscout?: Prisma.FloatFilter<"Quote"> | number
   notes?: Prisma.StringFilter<"Quote"> | string
   createdAt?: Prisma.DateTimeFilter<"Quote"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Quote"> | Date | string
@@ -318,7 +318,7 @@ export type QuoteScalarWhereWithAggregatesInput = {
   hospitalCover?: Prisma.StringWithAggregatesFilter<"Quote"> | string
   extraCover?: Prisma.StringWithAggregatesFilter<"Quote"> | string
   paymentFrequency?: Prisma.StringWithAggregatesFilter<"Quote"> | string
-  annualDiscout?: Prisma.IntWithAggregatesFilter<"Quote"> | number
+  annualDiscout?: Prisma.FloatWithAggregatesFilter<"Quote"> | number
   notes?: Prisma.StringWithAggregatesFilter<"Quote"> | string
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Quote"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Quote"> | Date | string
@@ -359,7 +359,7 @@ export type QuoteUpdateInput = {
   hospitalCover?: Prisma.StringFieldUpdateOperationsInput | string
   extraCover?: Prisma.StringFieldUpdateOperationsInput | string
   paymentFrequency?: Prisma.StringFieldUpdateOperationsInput | string
-  annualDiscout?: Prisma.IntFieldUpdateOperationsInput | number
+  annualDiscout?: Prisma.FloatFieldUpdateOperationsInput | number
   notes?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -373,7 +373,7 @@ export type QuoteUncheckedUpdateInput = {
   hospitalCover?: Prisma.StringFieldUpdateOperationsInput | string
   extraCover?: Prisma.StringFieldUpdateOperationsInput | string
   paymentFrequency?: Prisma.StringFieldUpdateOperationsInput | string
-  annualDiscout?: Prisma.IntFieldUpdateOperationsInput | number
+  annualDiscout?: Prisma.FloatFieldUpdateOperationsInput | number
   notes?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -400,7 +400,7 @@ export type QuoteUpdateManyMutationInput = {
   hospitalCover?: Prisma.StringFieldUpdateOperationsInput | string
   extraCover?: Prisma.StringFieldUpdateOperationsInput | string
   paymentFrequency?: Prisma.StringFieldUpdateOperationsInput | string
-  annualDiscout?: Prisma.IntFieldUpdateOperationsInput | number
+  annualDiscout?: Prisma.FloatFieldUpdateOperationsInput | number
   notes?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -413,7 +413,7 @@ export type QuoteUncheckedUpdateManyInput = {
   hospitalCover?: Prisma.StringFieldUpdateOperationsInput | string
   extraCover?: Prisma.StringFieldUpdateOperationsInput | string
   paymentFrequency?: Prisma.StringFieldUpdateOperationsInput | string
-  annualDiscout?: Prisma.IntFieldUpdateOperationsInput | number
+  annualDiscout?: Prisma.FloatFieldUpdateOperationsInput | number
   notes?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -479,7 +479,7 @@ export type EnumCoverFieldUpdateOperationsInput = {
   set?: $Enums.Cover
 }
 
-export type IntFieldUpdateOperationsInput = {
+export type FloatFieldUpdateOperationsInput = {
   set?: number
   increment?: number
   decrement?: number
@@ -554,7 +554,7 @@ export type QuoteUpdateWithoutApplicantsInput = {
   hospitalCover?: Prisma.StringFieldUpdateOperationsInput | string
   extraCover?: Prisma.StringFieldUpdateOperationsInput | string
   paymentFrequency?: Prisma.StringFieldUpdateOperationsInput | string
-  annualDiscout?: Prisma.IntFieldUpdateOperationsInput | number
+  annualDiscout?: Prisma.FloatFieldUpdateOperationsInput | number
   notes?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -567,7 +567,7 @@ export type QuoteUncheckedUpdateWithoutApplicantsInput = {
   hospitalCover?: Prisma.StringFieldUpdateOperationsInput | string
   extraCover?: Prisma.StringFieldUpdateOperationsInput | string
   paymentFrequency?: Prisma.StringFieldUpdateOperationsInput | string
-  annualDiscout?: Prisma.IntFieldUpdateOperationsInput | number
+  annualDiscout?: Prisma.FloatFieldUpdateOperationsInput | number
   notes?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1112,7 +1112,7 @@ export interface QuoteFieldRefs {
   readonly hospitalCover: Prisma.FieldRef<"Quote", 'String'>
   readonly extraCover: Prisma.FieldRef<"Quote", 'String'>
   readonly paymentFrequency: Prisma.FieldRef<"Quote", 'String'>
-  readonly annualDiscout: Prisma.FieldRef<"Quote", 'Int'>
+  readonly annualDiscout: Prisma.FieldRef<"Quote", 'Float'>
   readonly notes: Prisma.FieldRef<"Quote", 'String'>
   readonly createdAt: Prisma.FieldRef<"Quote", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Quote", 'DateTime'>

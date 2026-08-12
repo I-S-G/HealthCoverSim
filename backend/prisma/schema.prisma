@@ -25,7 +25,7 @@ model Quote {
   hospitalCover    String
   extraCover       String
   paymentFrequency String
-  annualDiscout    Int      @default(0)
+  annualDiscout    Float    @default(0)
   notes            String   @default("")
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
