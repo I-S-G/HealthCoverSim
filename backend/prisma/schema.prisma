@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+enum Cover {
+  Single
+  Couple
+  Family
+}
+
+model Quote {
+  id               String   @id @default(cuid())
+  customerName     String
+  coverType        Cover
+  hospitalCover    String
+  extraCover       String
+  paymentFrequency String
+  annualDiscout    Int      @default(0)
+  notes            String   @default("")
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  applicants Applicant[]
+}
+
+model Applicant {
+  id                   String @id @default(cuid())
+  quoteId              String
+  age                  Int
+  hospitalCoverHistory String
+
+  quote Quote @relation(fields: [quoteId], references: [id], onDelete: Cascade)
+}
